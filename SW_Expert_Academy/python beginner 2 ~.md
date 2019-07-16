@@ -254,3 +254,162 @@ a = [12,24,35,24,88,120,155,88,120,155]
 print(list(set(a)))
 ```
 
+27차시. 다음과 같이 등록된 학생의 이름을 출력하고, 이름을 입력하면 전화번호를 출력해주는 딕셔너리 객체를 이용한 전화번호부 프로그램을 작성하십시오.
+
+```python
+students = {'홍길동': '010-1111-1111','이순신': '010-1111-2222','강감찬': '010-1111-3333'}
+print('아래 학생들의 전화번호를 조회할 수 있습니다.')
+for i in students.keys():
+    print(i)
+a = input('전화번호를 조회하고자 하는 학생의 이름을 입력하십시오.\n')
+print(f'{a}의 전화번호는 {students[a]}입니다.')
+```
+
+### 28차시. ??
+
+29차시.다음 두 딕셔너리 객체를 합쳐 중복된 메뉴가 없는 딕셔너리를 만들고 가격이 3000원 이상인 메뉴를 아래와 같이 출력하는 프로그렘을 작성하십시오. 중복된 메뉴의 가격이 다를 경우 딕셔너리 a의 가격을 사용하세요
+
+```python
+a = {'아메리카노': 1900, '카페모카': 3300, '에스프레소': 1900, '카페라떼': 2500, '카푸치노': 2500, '바닐라라떼': 2900}
+b = {'헤이즐럿라떼': 2900, '카페모카': 3300, '밀크커피': 3300, '아메리카노': 1900, '샷크린티라떼': 3300}
+for menu,price in b.items():
+    if menu not in a:
+        a[menu] = price
+a = {menu:price for menu, price in a.items() if price >=3000}
+print(a)
+```
+
+30차시.   리스트의 원소를 키로 하고, 그 원소의 length를 값으로 갖는 딕셔너리 객체를 생성하는 코드를 작성해봅시다. 이 때 딕셔너리 내포 기능을 사용하며, 원소의 공백은 제거합니다  
+
+```python
+fruit = ['   apple    ','banana','  melon']
+fruit_len = {}
+for i in fruit:
+    i = i.strip()
+    fruit_len[i] = len(i)
+print(fruit_len)
+```
+
+31차시.   다음과 같이 정수 N을 입력받아서 1부터 N까지의 정수를 키로 하고, 그 정수의 제곱을 값으로 하는 딕셔너리 객체를 만드는 코드를 작성하십시오.  
+
+```python
+a = int(input())
+my_dict = {}
+for i in range(1, a+1):
+    my_dict[i] = i ** 2
+print(my_dict)
+```
+
+32차시. 다음과 같이 사용자가 입력한 문장에서 숫자와 문자를 구별해 각각의 개수를 출력하는 프로그램을 작성하십시오.
+
+```python
+a = input()
+letter = 0
+digit = 0
+for i in a:
+    if i.isalpha():
+        letter += 1
+    elif i.isdigit():
+        digit += 1
+print(f'LETTERS {letter}\nDIGITS {digit}')
+```
+
+33차시. 다음과 같이 사용자가 입력한 문장에서 대소문를 구별해 각각의 갯수를 출력하는 프로그램을 작성하십시오.
+
+```python
+a = input()
+upper = 0
+lower = 0
+for i in a:
+    if i.isupper():
+        upper += 1
+    elif i.islower():
+        lower += 1
+print(f'UPPER CASE {upper}\nLOWER CASE {lower}')
+```
+
+34차시. 
+
+```
+다음과 같은 기존의 맥주 가격을 5% 인상하려고 할 경우
+딕셔너리 내포 기능을 이용한 코드를 작성하십시오.
+beer = {'하이트': 2000, '카스': 2100, '칭따오': 2500, '하이네켄': 4000, '버드와이저': 500}
+```
+
+```python
+beer = {'하이트': 2000, '카스': 2100, '칭따오': 2500, '하이네켄': 4000, '버드와이저': 500}
+print(beer)
+expensivebeer = {x:y * 1.05 for x,y in beer.items()}
+print(expensivebeer)
+```
+
+35차시. 다음의 결과와 같이 입력된 문자열의 문자 빈도수를 구하는 프로그램을 작성하십시오.
+
+```python
+a = input()
+for i in set(a):
+    print(f'{i},{a.count(i)}')
+```
+
+37차시. 다음의 결과와 같이 회문(앞뒤 어느 쪽에서도 같은 단어, 말) 여부를 판단하는 코드를 작성하십시오.
+
+```python
+a = input()
+result = '입력하신 단어는 회문(Palindrome)입니다.'
+for i in range(len(a)//2):
+    if a[i] != a[-i-1]:
+        result = '입력하신 단어는 회문(Palindrome)이 아닙니다'
+        break
+print(result)
+```
+
+38차시. 다음과 같이 문장을 구성하는 단어를 역순으로 출력하는 프로그램을 작성하십시오.
+
+```python
+a = input().split(' ')
+for i in reversed(a):
+    print(i,end=' ')
+```
+
+39차시. 다음의 결과와 같이 임의의 URL 주소를 입력받아 protocol, host, 나머지(path, querystring, ...)로 구분하는 프로그램을 작성하십시오.
+
+```python
+a,b = input().split('://')
+c,d = b.split('/')
+print(f'protocol: {a}')
+print(f'host: {c}')
+print(f'others: {d}')
+```
+
+# 40차시. 다음의 결과와 같이 여러 문장을 입력받아 대문자로 변환해 출력하는 프로그램을 작성합니다.
+
+```
+hjkk
+```
+
+
+
+41차시.   사용자가 입력한 문장에서 공백을 이용해 단어들을 구분하고, 중복된 단어없이 단어를 콤마(,)로 구분해 사전순으로 출력하는 프로그램을 작성하십시오.  
+
+```python
+a = input().split(' ')
+a = sorted(set(a))
+print(*a,sep=',')
+```
+
+42차시. 다음 결과와 같이 문자열을 입력하면 짝수 인덱스를 가진 문자들을 출력하는 프로그램을 작성하십시오.
+
+```python
+# H1e2l3l4o5w6o7r8l9d
+a = input()
+for i in range(len(a)//2+1):
+    print(a[2*i],end='')
+```
+
+44차시. 다음의 결과와 같이 국어, 영어, 수학 점수를 입력받아 합계를 구하는 객체지향 코드를 작성하십시오.  이 때 학생 클래스의 객체는 객체 생성 시 국어, 영어, 수학 점수를 저장하며, 총점을 구하는 메서드를 제공합니다.
+
+```python 
+student = list(map(int,input().split(', ')))
+print(f'국어, 영어, 수학의 총점: {sum(student)}')
+```
+
