@@ -23,8 +23,8 @@ print('"파일은 c:"\\windows\\Users\\내문서\\Python에 저장이 되어있�
 a = 1
 b = 4
 c = -21
-D = b*b-4*a*c
-print((-b+D**0.5)/2)
-print((-b-D**0.5)/2)
+D = b**2-4*a*c
+print((-b+D**0.5)/2*a)
+print((-b-D**0.5)/2*a)
 ```
 

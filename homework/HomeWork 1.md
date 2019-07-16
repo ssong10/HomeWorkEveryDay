@@ -29,6 +29,11 @@ import sys
 abs(a - b) <= sys.float_info.epsilon  #시스템의 입실론값 대략 2.xx * 10^-16
 ```
 
+```python
+import math
+math.isclose(a,b)
+```
+
 
 
 ### 3. 이스케이프 문자열 중 1) 줄바꿈 2)탭 3)\을 작성
