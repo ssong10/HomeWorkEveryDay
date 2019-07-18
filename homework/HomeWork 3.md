@@ -37,6 +37,8 @@ def my_func(a,b):
 	
 result = my_func(4,7)
 print(result)
-# def문 안에서 print(c)인 11 출력하고 result는 None 이 출력됨.
+
+# def문 안에서 print(c)인 11 출력하고 result는 None 이 남게됨.
+
 print(a,b,c) # a, b, c 값은 사라지므로 에러
 ```
