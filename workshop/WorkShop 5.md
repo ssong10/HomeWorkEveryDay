@@ -33,11 +33,10 @@ d = calc.div(6,3)
 print(d)  # 2.0
 e = calc.div(6,0)
 print(e)  # 0으로는 나눌 수 없습니다.
+```
 
+```python
 from calc import div   # from 모듈 import 함수 
 a = div(6,0)
 print(a)  # 0으로는 나눌 수 없습니다.
 ```
-
-
-
