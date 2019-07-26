@@ -2,11 +2,11 @@
 
 ## beginner
 
-[swea - beginner1-1](./beginner/python beginner 1 ~35.md)
+[beginner1-1](./beginner/python beginner 1 ~35.md)
 
-[swea - beginner1-2](./beginner/python beginner 1 36 ~.md)
+[beginner1-2](./beginner/python beginner 1 36 ~.md)
 
-[swea - beginner2](./beginner/python beginner 2 ~.md)
+[beginner2](./beginner/python beginner 2 ~.md)
 
 
 
