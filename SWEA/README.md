@@ -41,3 +41,9 @@
 [1984.](https://swexpertacademy.com/main/code/problem/problemList.do?problemLevel=2&problemTitle=&orderBy=PASS_RATE&select-1=2&pageSize=10&pageIndex=3) [중간 평균값 구하기](./D2/1984.py)
 
 [1983. ](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PwGK6AcIDFAUq&categoryId=AV5PwGK6AcIDFAUq&categoryType=CODE) [조교의 성적 매기기](./D2/1983.py)
+
+[1926.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PTeo6AHUDFAUq&categoryId=AV5PTeo6AHUDFAUq&categoryType=CODE) [간단한 3,6,9게임](./D2/1926.py)
+
+[1970.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PsIl6AXIDFAUq) [쉬운 거스름돈](./D2/1970.py)
+
+
