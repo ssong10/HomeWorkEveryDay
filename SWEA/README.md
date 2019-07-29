@@ -46,4 +46,11 @@
 
 [1970.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PsIl6AXIDFAUq) [쉬운 거스름돈](./D2/1970.py)
 
+[2005.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5P0-h6Ak4DFAUq&categoryId=AV5P0-h6Ak4DFAUq&categoryType=CODE) [파스칼의 삼각형](./D2/2005.py)
+
+[1974.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5Psz16AYEDFAUq&categoryId=AV5Psz16AYEDFAUq&categoryType=CODE) [스도쿠 검증](./D2/1974.py)
+
+[2001.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PzOCKAigDFAUq) [파리 퇴치](./D2/2001.py)
+
+[1976.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PttaaAZIDFAUq&categoryId=AV5PttaaAZIDFAUq&categoryType=CODE) [시각 덧셈](./D2/1976.py)
 
