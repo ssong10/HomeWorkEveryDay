@@ -20,9 +20,10 @@
 <img src="https://picsum.photos/200" alt="">
 ```
 
-### 3.  two level relative path설정
+
+
+### 3.  relative path설정
 
 ```html
-<img src="../../Image/my_photo.png">
+<img src="../Image/my_photo.png">
 ```
-
