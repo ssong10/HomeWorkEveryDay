@@ -54,3 +54,10 @@
 
 [1976.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PttaaAZIDFAUq&categoryId=AV5PttaaAZIDFAUq&categoryType=CODE) [시각 덧셈](./D2/1976.py)
 
+[1966.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PrmyKAWEDFAUq&categoryId=AV5PrmyKAWEDFAUq&categoryType=CODE) [숫자를 정렬하자](./D2/1966.py)
+
+
+
+## Algorithms
+
+[1일차. 07/31]([https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AWw8omwKmQQDFAUD&contestProbId=AV134DPqAA8CFAYh&probBoxId=AWw8omwKmQUDFAUD+&type=PROBLEM&problemBoxTitle=01.List%287%EC%9B%9431%EC%9D%BC%29&problemBoxCnt=++1+](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AWw8omwKmQQDFAUD&contestProbId=AV134DPqAA8CFAYh&probBoxId=AWw8omwKmQUDFAUD+&type=PROBLEM&problemBoxTitle=01.List(7월31일)&problemBoxCnt=++1+) [1206.](./Algorithms/1206.py)
