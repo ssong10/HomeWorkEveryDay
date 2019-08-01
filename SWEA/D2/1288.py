@@ -1,18 +1,16 @@
 for i in range(int(input())):
-    b = {0,1,2,3,4,5,6,7,8,9}
-    result ={}
-    n =0
-    num = int(input().rstrip('\r'))
-    while b != True:
-        n += 1
-        number = n*num
-        while True:
-            if 1 <= number < 10:
-                b.remove(number)
-                print(b)
-                break
+    numlist =[]
+    n = int(input())
+    count = 1
+    while len(numlist) != 10:
+        num = n * count
+        for j in range(len(str(num))):
+            if num >= 10:
+                if num % 10 not in numlist:
+                    numlist.append(num%10)
+                num = num // 10
             else:
-                c = number % 10
-                number = number /10
-                b.remove(c)
-            print(b)
+                if num not in numlist:
+                    numlist.append(num)
+        count += 1
+    print('#{} {}'.format(i+1,(count-1)*n))

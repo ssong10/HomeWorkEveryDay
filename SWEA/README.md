@@ -10,21 +10,13 @@
 
 
 
-## D1
-
-
-
-
-
 ## D2 
-
-
 
 [1284.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV189xUaI8UCFAZN&categoryId=AV189xUaI8UCFAZN&categoryType=CODE) [수도요금경쟁](./D2/1284.py)
 
 [1204.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV13zo1KAAACFAYh&categoryId=AV13zo1KAAACFAYh&categoryType=CODE) [최빈수 구하기](./D2/1204.py)
 
-[1288.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18_yw6I9MCFAZN&categoryId=AV18_yw6I9MCFAZN&categoryType=CODE) 다시한번 풀어보세요!!
+[1288.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18_yw6I9MCFAZN&categoryId=AV18_yw6I9MCFAZN&categoryType=CODE) [새로운 불면증 치료법](./D2/1288.py)
 
 [1928.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PR4DKAG0DFAUq&categoryId=AV5PR4DKAG0DFAUq&categoryType=CODE)
 
@@ -56,8 +48,38 @@
 
 [1966.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PrmyKAWEDFAUq&categoryId=AV5PrmyKAWEDFAUq&categoryType=CODE) [숫자를 정렬하자](./D2/1966.py)
 
+[2007.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5P1kNKAl8DFAUq) [패턴 마디의 길이](./D2/2007.py)
+
+[1989. ](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PyTLqAf4DFAUq&categoryId=AV5PyTLqAf4DFAUq&categoryType=CODE) [초심자의 회문검사](./D2/1989.py)
 
 
-## Algorithms
 
-[1일차. 07/31]([https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AWw8omwKmQQDFAUD&contestProbId=AV134DPqAA8CFAYh&probBoxId=AWw8omwKmQUDFAUD+&type=PROBLEM&problemBoxTitle=01.List%287%EC%9B%9431%EC%9D%BC%29&problemBoxCnt=++1+](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AWw8omwKmQQDFAUD&contestProbId=AV134DPqAA8CFAYh&probBoxId=AWw8omwKmQUDFAUD+&type=PROBLEM&problemBoxTitle=01.List(7월31일)&problemBoxCnt=++1+) [1206.](./Algorithms/1206.py)
+## Algorithms 
+
+[1일차. 07/31]([https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AWw8omwKmQQDFAUD&contestProbId=AV134DPqAA8CFAYh&probBoxId=AWw8omwKmQUDFAUD+&type=PROBLEM&problemBoxTitle=01.List%287%EC%9B%9431%EC%9D%BC%29&problemBoxCnt=++1+](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AWw8omwKmQQDFAUD&contestProbId=AV134DPqAA8CFAYh&probBoxId=AWw8omwKmQUDFAUD+&type=PROBLEM&problemBoxTitle=01.List(7월31일)&problemBoxCnt=++1+) [1206.](./Algorithms/0731 - 1206.py)
+
+[2일차. 08/01]([https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AWw8omwKmQQDFAUD&contestProbId=AV139KOaABgCFAYh&probBoxId=AWxKg5SqTCIDFAWL&type=PROBLEM&problemBoxTitle=01.List%288%EC%9B%9401%EC%9D%BC%29&problemBoxCnt=1](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AWw8omwKmQQDFAUD&contestProbId=AV139KOaABgCFAYh&probBoxId=AWxKg5SqTCIDFAWL&type=PROBLEM&problemBoxTitle=01.List(8월01일)&problemBoxCnt=1) [1208](./algorithms/0801 - 1208.py)
+
+### 문제해결 기본
+
+#### [LIST1](https://swexpertacademy.com/main/learn/course/subjectDetail.do?courseId=AVuPDN86AAXw5UW6&subjectId=AWOVFCzaqeUDFAWg#)
+
+[4828_minmax](./algorithms/4828_minmax.py)
+
+[4831_전기버스](./algorithms/4831_전기버스.py)
+
+[4834_숫자카드](./algorithms/4834_숫자카드.py)
+
+[4835_구간합](./algorithms/4835_구간합.py)
+
+
+
+
+
+
+
+# BEAKJOON
+
+[2864.](https://www.acmicpc.net/problem/2846)   [오르막길](./algoritms/BAEK2864.py)
+
+[2851.](https://www.acmicpc.net/problem/2851)   [마리오](./algoritms/BAEK2851.py)
