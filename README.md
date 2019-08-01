@@ -52,6 +52,10 @@
 
 [1989. ](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PyTLqAf4DFAUq&categoryId=AV5PyTLqAf4DFAUq&categoryType=CODE) [초심자의 회문검사](./SWEA/D2/1989.py)
 
+[1986.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PxmBqAe8DFAUq&categoryId=AV5PxmBqAe8DFAUq&categoryType=CODE) [지그재그 숫자](./SWEA/D2/1986.py)
+
+[1859.](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5LrsUaDxcDFAXc&categoryId=AV5LrsUaDxcDFAXc&categoryType=CODE) [백만장자 프로젝트](./SWEA/D2/1859.py)
+
 ## D3
 
 [1일차. 07/31]([https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AWw8omwKmQQDFAUD&contestProbId=AV134DPqAA8CFAYh&probBoxId=AWw8omwKmQUDFAUD+&type=PROBLEM&problemBoxTitle=01.List%287%EC%9B%9431%EC%9D%BC%29&problemBoxCnt=++1+](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AWw8omwKmQQDFAUD&contestProbId=AV134DPqAA8CFAYh&probBoxId=AWw8omwKmQUDFAUD+&type=PROBLEM&problemBoxTitle=01.List(7월31일)&problemBoxCnt=++1+)  [1206.](./Algorithms/0731 - 1206.py)
@@ -87,3 +91,5 @@
 [2864.](https://www.acmicpc.net/problem/2846)   [오르막길](./algoritms/BAEK2864.py)
 
 [2851.](https://www.acmicpc.net/problem/2851)   [마리오](./algoritms/BAEK2851.py)
+
+[./SWEA/D2/1986.py]: 
