@@ -80,11 +80,15 @@
 
 [4835_구간합](./algorithms/4835_구간합.py)
 
+#### [LIST2](https://www.swexpertacademy.com/main/learn/course/subjectDetail.do?courseId=AVuPDN86AAXw5UW6&subjectId=AWOVF-WqqecDFAWg&&)
 
+[색칠하기](algorithms\painting.py) 
 
+[부분집합의 합](algorithms\sum-subset.py) 
 
+ [이진 탐색](algorithms\Binary search.py) 
 
-
+[특별한 정렬](algorithms\especial_matrix.py) 
 
 # BEAKJOON
 
@@ -92,4 +96,3 @@
 
 [2851.](https://www.acmicpc.net/problem/2851)   [마리오](./algoritms/BAEK2851.py)
 
-[./SWEA/D2/1986.py]: 
