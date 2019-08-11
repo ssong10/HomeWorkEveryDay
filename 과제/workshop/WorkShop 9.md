@@ -15,6 +15,8 @@
 ```
 
 > 이미지 파일 첨부할때는 img src=""를 사용하자.
+>
+> 링크는 `<a href="링크주소~" >` 형태이다.
 
 ```html
 <img src="https://picsum.photos/200" alt="">
