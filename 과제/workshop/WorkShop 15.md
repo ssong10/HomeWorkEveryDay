@@ -8,6 +8,15 @@
 
 
 
+* urls.py
+
+```python
+urlpatterns = [
+    path('one/',view.one),
+    path('two/',view.two)
+]
+```
+
 * base.html
 
 ```html
@@ -18,6 +27,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  {% block css %} {% blockend %}
 </head>
 <body>
   <h1>Base is everywhere!</h1>
@@ -27,6 +37,17 @@
 </html>
 ```
 
+* views.py
+
+```python
+def one(request):
+    return render(request,'one.html')
+def two(request):
+    return render(request,'two.html')
+```
+
+
+
 * one.html
 
 ```html
@@ -35,8 +56,6 @@
   <h2> I am ONE! </h2>
 {% endblock %}
 ```
-
-
 
 * two.html
 ```html
