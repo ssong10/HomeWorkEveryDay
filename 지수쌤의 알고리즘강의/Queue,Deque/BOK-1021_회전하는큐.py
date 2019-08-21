@@ -5,27 +5,18 @@ qq = deque(0 for _ in range(N))
 result = 0
 for idx,val in enumerate(elem):
     qq[val-1] = idx+1
-print(qq)
-for i in range(M):
-    if i == M-1:
-        result += min(len(qq)-qq.index(i+1)-1,qq.index(i+1))
+for i in range(1,M+1):
+    if i == M:
+        result += min(len(qq)-qq.index(i),qq.index(i))
     else:
-        if qq.index(i+1) > qq.index(i+2):
-            while qq[-1] != i+1:
-                print(qq,result)
-
+        if qq.index(i) > len(qq)-qq.index(i):
+            while qq[0] != i:
                 qq.appendleft(qq.pop())
                 result += 1
-                print(qq,result)
-
-            qq.pop()
+            qq.popleft()
         else:
-            while qq[0] != i+1:
-                print(qq,result)
-
+            while qq[0] != i:
                 qq.append(qq.popleft())
                 result += 1
-                print(qq,result)
-
             qq.popleft()
 print(result)
