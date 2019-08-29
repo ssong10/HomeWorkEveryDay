@@ -1,18 +1,20 @@
 from collections import deque
 def BFS():
     result = 0
-    while not N in tmp:
-        result += 1
+    while tmp:
         for _ in range(len(tmp)):
-            
-            num = tmp.pop(0)
-            tmp.append(num-1); visit[num-1] = True
-            tmp.append(num+1); visit[num+1] = True
-            tmp.append(num * 2); visit[num*2] = True
-    
-    print(result)
+            num = tmp.popleft()
+            if num == K :
+                return result
+            for i in [num-1,num+1,num*2]:
+                if -1< i < 100001 and visit[i] == False:
+                    tmp.append(i)
+            visit[num] = True
+        result += 1
+        print(tmp)
 
-visit = [False]* (K+1)
 N,K = map(int,input().split())
+visit = [False] * (100001)
+visit[N] = True
 tmp = deque([N])
-BFS()
+print(BFS())
