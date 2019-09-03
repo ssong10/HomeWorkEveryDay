@@ -30,7 +30,7 @@ for point in web:
 DFS_result=[]
 DFS(V)
 print(DFS_result)
-
+print(web)
 
 BFS_result=[]
 tmp = [V]
