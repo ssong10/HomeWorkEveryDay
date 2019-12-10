@@ -32,7 +32,10 @@ for spin in spins:
                 result += pan[y][x]
                 cnt += 1
     if not same:
-        avg = result/cnt
+        if cnt:
+            avg = result/cnt
+        else:
+            avg = 0
         result = 0
         for y in range(N):
             for x in range(M):
