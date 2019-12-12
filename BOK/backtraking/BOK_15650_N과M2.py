@@ -9,7 +9,6 @@ def back(choice):
                 back(choice)
                 used[i-1] =0
                 choice.pop()
-        
 N,M = map(int,input().split())
 used = [0] * N
 back([])
