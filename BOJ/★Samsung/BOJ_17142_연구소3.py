@@ -38,7 +38,7 @@ for y in range(N):
         elif arr[y][x] == 0:
             tot.add((y,x))
 result,chk = 10**6,False
-visit = [0] * len(vs)
+visit = [0] * (len(vs)+1)
 dy,dx = [-1,1,0,0],[0,0,-1,1]
 pick(0,[])
 if chk:
