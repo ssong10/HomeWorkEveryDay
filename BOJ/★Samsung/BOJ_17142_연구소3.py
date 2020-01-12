@@ -12,6 +12,8 @@ def pick(n,tmp):
 
 def virus(all_v,tmp,n):
     global result,chk
+    if n >= result:
+        return
     if all_v == tot:
         chk = True
         result = min(result,n)
@@ -24,7 +26,7 @@ def virus(all_v,tmp,n):
                 next_v.append((yy,xx))
                 if arr[yy][xx] == 0:
                     all_v.add((yy,xx))
-    if next_v and n < result:
+    if next_v:
         virus(all_v,next_v,n+1)
 
 
@@ -37,11 +39,11 @@ for y in range(N):
             vs.append((y,x))
         elif arr[y][x] == 0:
             tot.add((y,x))
-result,chk = 10**6,False
-visit = [0] * (len(vs)+1)
+result,chk = 10**5,False
+visit = [0] * (len(vs))
 dy,dx = [-1,1,0,0],[0,0,-1,1]
 pick(0,[])
 if chk:
     print(result)
 else:
-    print('-1')
+    print(-1)

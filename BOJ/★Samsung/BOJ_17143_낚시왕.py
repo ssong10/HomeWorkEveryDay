@@ -1,7 +1,6 @@
 dy,dx = [-1,1,0,0],[0,0,1,-1]
 
 def fish(sk,i):
-    print(sk)
     global result
     if i > C:
         return
@@ -27,10 +26,12 @@ def fish(sk,i):
             else:
                 val[1] -= 1 
         if (y,x) not in new_sk:           
-            new_sk[(y,x)] = val
+            new_sk[(y,x)] =val
         else:
             if val[2] > new_sk[(y,x)][2]:
                 new_sk[(y,x)] = val
+    print(new_sk)
+    print(result)
     fish(new_sk,i+1)
 
 R, C , M = map(int,input().split())

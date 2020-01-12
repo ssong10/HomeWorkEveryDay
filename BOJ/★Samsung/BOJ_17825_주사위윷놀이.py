@@ -36,3 +36,4 @@ for i in arr:
             print(tmp[idx][1])
             result += tmp[idx][1]
             break
+print(result)
