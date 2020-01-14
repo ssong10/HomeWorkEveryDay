@@ -11,8 +11,8 @@ pan = [ [0,0],
 
 def move(k , n):
     global result
-    if 15< k < 20 and 20 < k+n:
-        return 33
+    if 15< k < 20 and 20 <= k+n:
+        return move(32,k+n-20)
     if k + n >= 33:
         return 33
     if k <= 23 <= k+n:
