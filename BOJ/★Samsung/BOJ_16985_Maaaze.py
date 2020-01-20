@@ -1,8 +1,12 @@
+from collections import deque
 dz,dy,dx = [-1,1,0,0,0,0],[0,0,-1,1,0,0],[0,0,0,0,-1,1]
 
 def go(tmp):
     visit = [[[0]*5 for _ in range(5)] for _ in range(5)]
+    t = 0
     while tmp:
+        if t > result:
+            return
         for _ in range(len(tmp)):
             z,y,x = tmp.popleft()
             for d in range(6):
@@ -19,7 +23,7 @@ def spin(pan,i):
     for y in range(5):
         for x in range(5):
             tmp[x][4-y]= pan[y][x]
-    spin(tmp,i-1)
+    return spin(tmp,i-1)
 
 def makeorder(panorder,n):
     if n ==5 :
@@ -34,13 +38,15 @@ def makeorder(panorder,n):
 
 def make(arr,panorder,i):
     if i == 4:
-        print(arr)
+        go(arr,deque([(0,0,0)]))
         return
-    for _ in range(3):
-        arr.append(spin(maze[panorder[i]])
+    for j in range(3):
+        arr.append(spin(maze[panorder[i]],j))
+        make(arr,panorder,i+1)
+        arr.pop()
 
-from collections import deque
 maze = [[list(map(int,input().split())) for _ in range(5)] for _ in range(5)]
 panorder, used = [[] for _ in range(5)], [0] * 5
+result = 10 ** 6
 # makeorder(panorder,0)
 make([],[0,1,2,3,4],0)
