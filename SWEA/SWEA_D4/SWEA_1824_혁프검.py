@@ -13,7 +13,7 @@ def next(y,x,d):
     return yy,xx
 
 def move(y,x,d,memory):
-    global result
+    global result,visit
     yy,xx = next(y,x,d)
     a = arr[yy][xx]
     if a == "<":
@@ -36,10 +36,11 @@ def move(y,x,d,memory):
             d = 1
     elif a == '?':
         for dd in range(4):
-            tmp = next(yy,xx,dd)
-            if not (y == tmp[0] and x ==tmp[1]):
+            yy,xx = next(yy,xx,dd)
+            if memory not in visit[yy][xx]:
+                visit[yy][xx].add(memory)
                 move(yy,xx,dd,memory)
-                return
+        return
     elif a == '.':
         pass
     elif a == '@':
@@ -57,15 +58,17 @@ def move(y,x,d,memory):
             memory = 15
     else:
         memory = int(a)
-    move(yy,xx,d,memory)
+    if memory not in visit[yy][xx]:
+        visit[yy][xx].add(memory)
+        move(yy,xx,d,memory)
 
 for tc in range(int(input())):
     result = 'NO'
     N,M = map(int,input().split())
     arr = list(input() for _ in range(N))
+    visit = [[set() for _ in range(M)] for _ in range(N)]
     num = int(arr[0][0]) if arr[0][0].isdigit() else 0 
-    try:
-        move(0,0,2,num)
-    except RecursionError:
-        pass
+    move(0,0,2,num)
     print(f'#{tc+1} {result}')
+    for i in visit:
+        print(i)
