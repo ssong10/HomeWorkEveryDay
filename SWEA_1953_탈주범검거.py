@@ -1,9 +1,10 @@
+from collections import deque
 dy,dx = [-1,0,1,0],[0,1,0,-1]
 def go(tmp,n):
     while tmp:
         if n:
             for _ in range(len(tmp)):
-                y,x = tmp.pop()
+                y,x = tmp.popleft()
                 if arr[y][x] == 1:
                     dd = [0,1,2,3]
                 elif arr[y][x] == 2:
@@ -41,9 +42,8 @@ for tc in range(int(input())):
     N,M,R,C,L = map(int,input().split()) # 가,세,맨홀y,x, 시간
     arr = [list(map(int,input().split())) for _ in range(N)]
     visit = [[0] * M for _ in range(N)]
-    tmp = [[R,C]]
+    tmp = deque([[R,C]])
     go(tmp,L)
     for v in visit:
         print(v)
     print(sum(map(sum,visit)))
-    print('-----')
