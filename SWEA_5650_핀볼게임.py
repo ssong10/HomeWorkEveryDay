@@ -47,7 +47,7 @@ def go(y,x,d):
         elif d == 2:
             go(y,x,0)
         else:
-            go(y,x,1)
+            go(y,x,2)
 
 for tc in range(int(input())):
     N = int(input())
