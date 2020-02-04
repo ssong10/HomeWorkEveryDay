@@ -13,7 +13,6 @@ def made(y,x,val,):
 arr = [list(input()) for _ in range(12)]
 result = 0
 bomb = True
-# while bomb:
 new_arr = [['.'] * 6 for _ in range(12)]
 for y in range(12):
     for x in range(6):
