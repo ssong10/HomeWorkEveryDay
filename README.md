@@ -96,3 +96,5 @@
 
 [2851.](https://www.acmicpc.net/problem/2851)   [마리오](./algoritms/BAEK2851.py)
 
+123
+
