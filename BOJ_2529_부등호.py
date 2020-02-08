@@ -1,11 +1,17 @@
 def start(tmp,n):
+    if n == k+1:
+        print(tmp)
+        return
     for num in range(10):
-        if n < len(arr):
-            if arr[n] == "<" and tmp[-1] < num:
+        if num not in tmp:
+            if arr[n] == "<" and (not tmp or tmp[-1] < num):
                 tmp.append(num)
-            elif tmp[-1] > num:
+                start(tmp,n+1)
+                tmp.pop()
+            elif arr[n] == ">" and (not tmp or tmp[-1] > num):
                 tmp.append(num)
-        print(start)
+                start(tmp,n+1)
+                tmp.pop()
 
 k = int(input())
 arr = list(input().split())
