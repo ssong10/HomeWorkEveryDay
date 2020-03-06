@@ -9,7 +9,6 @@ def made(y,x,val,):
         if -1<yy<12 and -1 <xx < 6 and arr[yy][xx] == val:
             made(yy,xx,val)     
 
-
 arr = [list(input()) for _ in range(12)]
 result = 0
 bomb = True
