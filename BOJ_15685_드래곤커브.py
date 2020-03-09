@@ -6,15 +6,14 @@ for curve in curves:
     arr = {(x,y):set([d])}
     dd = [d]
     for i in range(g):
-        print('------',i,'-------')
         tmp = []
-        for j in range(len(dd)-1,-1,-1):
+        for j in range(len(dd)):
             d = (dd[j] + 1) % 4
-            x,y = x+dir[d][1], y+dir[d][0]
+            x,y = x+dir[dd[j]][1], y+dir[dd[j]][0]
             if (x,y) in arr:
                 arr[(x,y)].add(d)
             else:
                 arr[(x,y)] = set([d])
+        for j in range(len(dd)-1,-1,-1):
             dd.append((dd[j]+1)%4)
-        print(dd)
         print(arr)
