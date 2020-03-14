@@ -17,3 +17,4 @@ for curve in curves:
         for j in range(len(dd)-1,-1,-1):
             dd.append((dd[j]+1)%4)
         print(arr)
+    print(arr)
