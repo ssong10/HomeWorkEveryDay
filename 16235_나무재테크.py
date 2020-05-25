@@ -1,10 +1,9 @@
-from collections import deque
-
 dy,dx = [-1,-1,-1,0,0,1,1,1], [-1,0,1,-1,1,-1,0,1]
 N,M,K = map(int,input().split())
 arr = [[5]*N for _ in range(N)]
 sd = [list(map(int,input().split())) for _ in range(N)]
-trees = deque([])
+trees = []
+diedict = {}
 for _ in range(M):
     x,y,z = map(int,input().split())
     trees.append([z,x-1,y-1])
@@ -16,14 +15,17 @@ for _ in range(K):
             arr[tree[1]][tree[2]] -= tree[0]
             tree[0] += 1
         else:
-            tree[0] *= -1
+            if (tree[1],tree[2]) in diedict:
+                diedict[(tree[1],tree[2])] += tree[0] // 2
+            else:
+                diedict[(tree[1],tree[2])] = tree[0] // 2
 
     # 여름
-    trees = deque(sorted(list(trees)))
-    while trees[0][0] < 0:
-        tree = trees.popleft()
-        arr[tree[1]][tree[2]] -= tree[0] // 2
-
+    print(diedict)
+    for tree in diedict:
+        arr[tree[0]][tree[1]] += diedict[tree]
+    diedict = {}
+    print(trees)
     # 가을
     for i in range(len(trees)):
         tree= trees[i]
