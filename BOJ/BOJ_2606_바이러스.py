@@ -1,20 +1,17 @@
-def DFS(v):
-    visit[v]=True
-    result.append(v)
-    for i in V[v]:
-        if not visit[i]:
-            DFS(i)
+def DFS(s):
+    visit[s] = True
+    for n in V[s]:
+        if not visit[n]:
+            DFS(n)
 
 N = int(input())
 M = int(input())
+visit = [False] * N
+V = [[] for _ in range(N)]
 
-V = [[] for _ in range(N+1)]
-visit = [False] * (N+1)
 for _ in range(M):
-    u,v = map(int,input().split())
-    V[v].append(u)
-    V[u].append(v)
-result = []
-DFS(1)
-print(len(result)-1)
-
+    v,w = map(int,input().split())
+    V[v-1].append(w-1)
+    V[w-1].append(v-1)
+DFS(0)
+print(sum(visit)-1)
