@@ -7,7 +7,6 @@ def back(n):
             back(n + 1)
             result.pop()
 
-
 N, M = map(int, input().split())
 result = []
 back(0)
