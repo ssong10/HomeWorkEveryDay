@@ -1,11 +1,8 @@
 N = int(input())
 step = [int(input()) for _ in range(N)]
-
-dp = [[0]*N for _ in range(3)]
-dp[1][0] = step[0]
-
-for i in range(1, N):
-    dp[0][i] = max(dp[1][i-1],dp[2][i-1])
-    dp[1][i] = dp[0][i-1]+step[i]
-    dp[2][i] = dp[1][i-1]+step[i]
-print(max(dp[1][-1],dp[2][-1]))
+dp = [0]*N
+if N>1:
+    dp[1] = step[0]+step[1]
+for i in range(2,N):
+    dp[i] = max(dp[i-2]+step[i], dp[i-3]+step[i-1]+step[i])
+print(dp[-1])
