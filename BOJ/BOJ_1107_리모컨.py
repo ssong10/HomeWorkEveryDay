@@ -22,18 +22,7 @@ for i in range(len(nums)):
   for j in range(10):
     if wrong[j]:
       tmp[i].add(j)
-# for i in range(len(nums)):
-#   num = int(nums[i])
-#   if wrong[num]:
-#     tmp[i].add(num)
-#   for plus in range(num+1,num+10):
-#     if wrong[plus%10]:
-#       tmp[i].add(plus%10)
-#       break
-#   for minus in range(num-1,num-10,-1):
-#     if wrong[minus]:
-#       tmp[i].add(minus%10)
-#       break
+      
 result = diff(100)
 minnum = ''
 for i in range(1,10):
@@ -52,6 +41,5 @@ for i in range(9,-1,-1):
     if maxnum:
       result = min(result,len(maxnum)+diff(int(maxnum)))
     break
-print(tmp)
 comb(0,0)
 print(result)
