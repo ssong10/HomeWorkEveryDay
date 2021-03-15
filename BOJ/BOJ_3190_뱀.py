@@ -31,7 +31,6 @@ while True:
       board[ty][tx] = -1
     else:
       break
-
     # 움직이는지
     if move_cnt < len(moves) and int(moves[move_cnt][0]) == time:
       if moves[move_cnt][1] == 'D':
@@ -39,10 +38,8 @@ while True:
       else:
         d = (d-1) % 4
       move_cnt += 1
-
     # 머리 바꿔주기
     head = (nhy,nhx)
-
     # 머리방향
     board[nhy][nhx] = d
   else:
