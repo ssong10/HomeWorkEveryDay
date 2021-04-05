@@ -1,12 +1,16 @@
+from collections import deque
 N = int(input())
 arr = list(map(int,input().split( )))
-result = [-1]
-stack =[]
+result = [-1] * N
+q = deque()
 for i in range(N):
-    num = arr.pop() # 7,2,5,3
-    stack.append(num)
-    print(arr,stack)
-    if not stack or stack[-2] > num:
-        stack.pop()
-    print(arr,stack)
-result.append(stack[-1])
+    num = arr[i]
+    while q:
+        idx,val = q.popleft()
+        if num > val:
+            result[idx] = num
+        else:
+            q.appendleft((idx,val))
+            break
+    q.appendleft((i,num))
+print(*result)
