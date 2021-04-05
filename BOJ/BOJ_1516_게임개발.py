@@ -16,9 +16,9 @@ while tmp:
   i,v = tmp.popleft()
   for n_i, n_v in builds[i][0]:
     builds[n_i][1].discard(i)
-    result[n_i-1] = max(result[n_i-1], v+n_v)
+    result[n_i-1] = max(result[n_i-1], result[i-1]+n_v)
     if not len(builds[n_i][1]):
-      tmp.append([n_i,v+n_v])
+      tmp.append([n_i,result[i-1]])
 
 for r in result:
   print(r)
