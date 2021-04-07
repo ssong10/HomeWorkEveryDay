@@ -1,18 +1,19 @@
 def comb(turn,n):
   global result
-  # n = 선수 번호
   if n == 9:
     score = game(turn)
-    print(turn)
     if result < score:
       result = score
     return
-  for i in range(9):
-    if i == 3:
+  if n == 3:
+    comb(turn,n+1)
+    return
+  for i in range(1,9):
+    if not players[i]:
+      players[i] = True
+      turn[n] = i + 1
       comb(turn,n+1)
-    else:
-      turn[i] = n
-      comb(turn,n+1)
+      players[i] = False
 
 def game(turn):
   play_id = 0
@@ -24,16 +25,26 @@ def game(turn):
     while out < 3:
       player = turn[play_id] - 1
       hit = inning[player]
-      if hit:
-        bases[0] = 1
-        for i in range(3,-1,-1):
-          if bases[i]:
-            if i+hit > 3:
-              bases[i] = 0
-              score += 1
-            else:
-              bases[i] = 0
-              bases[i+hit] = 1
+      if hit == 1:
+        score += bases[3]
+        bases[3] = bases[2]
+        bases[2] = bases[1]
+        bases[1] = 1
+      elif hit == 2:
+        score += bases[3]+bases[2]
+        bases[3] = bases[1]
+        bases[2] = 1
+        bases[1] = 0
+      elif hit == 3:
+        score += bases[3]+bases[2]+bases[1]
+        bases[3] = 1
+        bases[2] = 0
+        bases[1] = 0
+      elif hit == 4:
+        score += bases[3]+bases[2]+bases[1]+1
+        bases[3] = 0
+        bases[2] = 0
+        bases[1] = 0
       else:
         out += 1
       play_id += 1
@@ -44,7 +55,8 @@ def game(turn):
 
 N = int(input())
 innings = [list(map(int,input().split())) for _ in range(N)]
+players = [True] + [False] * 8
 turn = [0,0,0,1,0,0,0,0,0]
 result = 0
-comb(turn,2)
+comb(turn,0)
 print(result)
