@@ -23,3 +23,6 @@ N = int(input())
 game = [list(map(int,input().split())) for _ in range(N)]
 dy, dx = [-1, 1, 0, 0], [0, 0, -1, 1]
 result = []
+for d in range(4):
+    move(game,d,0)
+print(result)
