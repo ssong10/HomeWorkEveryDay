@@ -9,7 +9,7 @@ def find(start):
   tmp = []
   for t in tree[start]:
     heapq.heappush(tmp,t)
-  while sum(visit) < N:
+  while tmp and sum(visit) < N:
     t = heapq.heappop(tmp)
     v,n = t
     if not visit[n]:
@@ -19,7 +19,6 @@ def find(start):
         if not visit[nn] and answer[nn] > v+vv:
           answer[nn] = v+vv
           heapq.heappush(tmp,(v+vv,nn))
-  print(answer)
   return answer
 N, E = map(int,input().split())
 tree = [[] for _ in range(N+1)]
@@ -28,16 +27,19 @@ for _ in range(E):
   tree[a-1].append((c,b-1))
   tree[b-1].append((c,a-1))
 v1,v2 = map(int,input().split())
-for (n,v) in tree[v1-1]:
-  if v2 == v:
-    result = n
+nodes = find(v1-1)
 graph1 = find(0)
 graph2 = find(N-1)
-
-tmp = MAX
+result = MAX
+if v1 == 1 and v2 == N:
+  result = min(result,nodes[N-1])
 if graph1[v1-1] != MAX and graph2[v2-1] != MAX:
-  tmp = min(tmp,graph1[v1-1] + graph2[v2-1])
+  tmp = graph1[v1-1] + graph2[v2-1] + nodes[v2-1]
+  result = min(tmp,result)
 if graph2[v1-1] != MAX and graph1[v2-1] != MAX:
-  tmp = min(tmp,graph2[v1-1] + graph1[v2-1])
-print(tmp,result)
-print(tmp+result)
+  tmp = graph2[v1-1] + graph1[v2-1] + nodes[v2-1]
+  result = min(tmp,result)
+if result == MAX:
+  print(-1)
+else:
+  print(result)
