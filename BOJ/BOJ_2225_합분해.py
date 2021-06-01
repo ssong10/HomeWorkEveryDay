@@ -1,22 +1,8 @@
 N, K = map(int,input().split())
-ans = 1
-K -= 1
-if K > N - K:
-  K = N-K
-while K:
-  ans = (ans * (N+1) // K ) % 100000000
-  N += 1
-  K -= 1
-print(ans)
-
-3 3
-0 0 3
-0 1 2
-0 2 1
-0 3 0
-1 0 2
-1 1 1
-1 2 0
-2 0 1
-2 1 0
-3 0 0
+arr = [[1] + [0] * (K-1) for _ in range(N+1)]
+for i in range(1,K): # i 개
+  for j in range(N+1): # j 숫자
+    for m in range(j+1):
+      arr[j][i] += arr[j-m][i-1]
+      arr[j][i] %= 1000000000
+print(arr[-1][-1])
