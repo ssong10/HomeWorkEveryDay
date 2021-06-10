@@ -30,13 +30,7 @@ def pop(board):
     answer += 1
     for (y,x) in delete:
       board[y][x] = '.'
-    for b in board:
-      print(b)
-    print()
     drop(board)
-    for b in board:
-      print(b)
-    print()
     pop(board)
 
 def drop(board):
