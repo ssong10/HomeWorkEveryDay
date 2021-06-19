@@ -1,4 +1,3 @@
-print(p)
 import sys
 input = sys.stdin.readline
 def check(i):
@@ -20,7 +19,7 @@ visit = [False] * N
 for i in trues[1:]:
   visit[i-1] = True
   check(i)
-  
+
 answer = 0
 for order in orders:
   for o in order:
